@@ -1,4 +1,5 @@
-
+#ifndef student //nazwa nie musi byc taka sama jak plik
+#define student
 
 #include <iostream>
 #include <string>
@@ -31,3 +32,4 @@ struct Student
 		return result.str();    
     }
 };
+#endif
