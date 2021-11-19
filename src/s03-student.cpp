@@ -1,32 +1,15 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include "s03-student.h"
 
 using namespace std;
 
-struct Student
+auto main() ->int
 {
-	private:
-	string imie;
-	string nazwisko;
-	string indeks;
-	int semestr;
-	float srednia;
-	public:
-	Student(std::string im, std::string naz, std::string in, int sm, float sr)
-	{
-		if(im=="" || naz=="" || in=="" || sm<=0 || sr<0) cout<<"Podales bledne dane";
-		else {imie=im; nazwisko=naz; indeks=in; semestr=sm; srednia=sr;}
-	}
-	void pokaz()
-	{
-		cout<<imie<<" "<<nazwisko<<" "<<indeks<<" "<<semestr<<" "<<srednia<<"\n";
-	}
-};
-int main()
-{
-	Student s1("Kacper","Kwiatkowski","s24533",1,4.2);
-	s1.pokaz();
+	auto st = Student{"Kacper","Kwiatkowski","s24533", 1, 3.6};
+	cout<<st.to_string()<<std::endl;
+	
 	return 0;
 }
 	
